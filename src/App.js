@@ -13,7 +13,7 @@ import './App.css';
 
 //You must add your own API key here from Clarifai.
 const app = new Clarifai.App({
- apiKey: 'YOUR API KEY HERE'
+ apiKey: '1419b0a816ab4fe99f5656e4ea05a2e5'
 });
 
 // No Longer need this. Updated to particles-bg
@@ -91,7 +91,7 @@ class App extends Component {
       .then(response => {
         console.log('hi', response)
         if (response) {
-          fetch('http://localhost:3000/image', {
+          fetch('https://face-recognition-brain-api-w02a.onrender.com', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
